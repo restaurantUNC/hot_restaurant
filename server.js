@@ -13,9 +13,31 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
+var customers = [];
 
+app.get('/', function(req,res) {
+	res.sendFile(path.join(__dirname, 'index.html'));
+});
 
+app.get('/tables', function(req, res) {
+	res.sendFile(path.join(__dirname, 'tables.html'));
+});
 
+app.get('/reserve', function(req, res) {
+	res.sendFile(path.join(__dirname, 'reservation.html'))
+});
+
+app.get('/api/tables', function(req, res) {
+	for (var i = 0; i < 4; i++) {
+		res.json(customers[i]);
+	}
+});
+
+app.get('/api/waitlist', function(req, res) {
+	for (var i = 5; i < customers.length; i++) {
+		res.json(customers[i]);
+	}
+});
 
 
 

@@ -1,0 +1,25 @@
+{
+  "name": "hot_restaurant",
+  "version": "1.0.0",
+  "description": "wait tables and reservations",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.18.1",
+    "express": "^4.15.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/restaurantUNC/hot_restaurant.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/restaurantUNC/hot_restaurant/issues"
+  },
+  "homepage": "https://github.com/restaurantUNC/hot_restaurant#readme"
+}

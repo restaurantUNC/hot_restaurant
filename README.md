@@ -20,9 +20,14 @@ Our Restaurant has just 5 tables available since it's amazingly popular. First f
 
 ## Notes
 
-* Current app doesn't have admin handling. We'll deal with that at a later time.
+* This app doesn't have admin handling.
 * Don't separate the JavaScript from the HTML in the client-side code. (i.e. Don't use external JavaScript. If you do, you will need an additional line of code to configure the express server to know where the JavaScript is).
 
-## Good luck! Don't stress out
 
-App created by 
+
+## App created by: 
+
+* Devon Wood https://github.com/orgs/restaurantUNC/people/Flakkus35
+* Nicholas Allen https://github.com/orgs/restaurantUNC/people/nickallenjr
+* Jon Riddick https://github.com/orgs/restaurantUNC/people/jonriddick
+* Steve Murphy https://github.com/orgs/restaurantUNC/people/stevemurphy256

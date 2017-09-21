@@ -39,9 +39,12 @@ app.get('/api/waitlist', function(req, res) {
 	}
 });
 
-
-
-
+app.post('/api/new', function(req, res) {
+	console.log('Works');
+	var newCustomer = req.body;
+	customers.push(newCustomer);
+	res.json(newCustomer);
+});
 
 app.listen(port, function() {
   console.log("App listening on PORT " + port);

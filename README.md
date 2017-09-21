@@ -1,4 +1,4 @@
-# hot_restaurant
+# HOT RESTAURANT
 
 * Description: Basic app demonstrating Node and Express with jQuery.
 Our app is made up of two parts: 

@@ -14,6 +14,7 @@ app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
 var customers = [];
+var waitlist = [];
 
 app.get('/', function(req,res) {
 	res.sendFile(path.join(__dirname, 'index.html'));
@@ -28,21 +29,32 @@ app.get('/reserve', function(req, res) {
 });
 
 app.get('/api/tables', function(req, res) {
-	for (var i = 0; i < 4; i++) {
+	/*for (var i = 0; i < 4; i++) {
 		res.json(customers[i]);
-	}
+	}*/
+	return res.json(customers);
 });
 
 app.get('/api/waitlist', function(req, res) {
-	for (var i = 5; i < customers.length; i++) {
+	/*for (var i = 5; i < customers.length; i++) {
 		res.json(customers[i]);
-	}
+	}*/
+	return res.json(waitlist);
+});
+
+app.post('/api/clear', function(req, res) {
+	customers = [];
+	waitlist = [];
 });
 
 app.post('/api/new', function(req, res) {
 	console.log('Works');
 	var newCustomer = req.body;
-	customers.push(newCustomer);
+	if (customers.length >= 5) {
+		waitlist.push(newCustomer);
+	} else {
+		customers.push(newCustomer);
+	}
 	res.json(newCustomer);
 });
 
